@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>BookFlix</title>
+
+  <!-- CSS  -->
+  <style> 
+  body {
+  height: 90vh;
+  margin: 15px;
+  background-image: url(https://img.freepik.com/premium-photo/child-magic-book-boy-standing-opened-book-looking-other-books-floating-air-digital-art-style-illustration-painting_743201-5190.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  background-position: right;
+}
+    #Search {
+      width: 50%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+      border: 3px solid #ccc;
+      -webkit-transition: 0.5s;
+      transition: 0.5s;
+      outline: none;
+    }
+    
+    #Search:focus {
+      border: 3px solid #555;
+    }
+    
+    </style>
+    <style>
+        .predicted p{
+            text-justify: auto;
+            color: #555;
+        }
+        .btn{
+    background-color: #4494df;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    align-items: center;
+    }
+   
+    .container {
+        margin-top: 20px; /* adjust as needed */
+        }
+
+    .form-group {
+    margin-bottom: 0;
+    }
+    h3{
+        color: #04AA6D;
+        text-align: justify;
+    }
+    h2{
+        color: rgb(12, 24, 59);
+    }
+    .card {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding-left: 20px;
+}
+    .logo{
+        color: white;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="logo"><h1 id="logo-container" class="brand-logo"><I>BookFlix</I></h1>
+    </div>
+
+<div class="card">
+     <br><br>
+    <div>
+        <h3>Welcome to BookFlix <br> A intelligent book recommendation system</h3>
+    </div>
+    <div>
+        <h2>Experience the reading! Type in the book you have read below <br> We can recommend best books for your next reading list</h2>
+    </div>
+	
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form method="POST" action="/predict">
+                    <div class="row">
+                        <div class="search_div" >
+                        <input placeholder="Enter book name"  id="Search" name='Search'type="text" >
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="input-field col s4">
+                            <label for="User ID"><b>User ID</b></label>
+                            <br>
+                        <input   id="User ID" name='User ID'type="text" class="validate">
+                        </div>
+                    </div> -->
+                    <div >
+                        <button class="btn" type="submit">Recommend Books</button>
+                    </div>
+                </form>
+	        </div>
+	    </div>
+	</div>
+    <div class="predicted">
+        <h4>Top recommended books for your next reading list!</h4>
+        <p>
+            <ol>
+                {% for item in pred %}
+            
+                    <li>{{ item }}</li>
+            
+                {% endfor %}
+            </ol>
+        </p><br>
+       
+    </div>
+
+
+  
+</div>
+</body>
+
+</html>
