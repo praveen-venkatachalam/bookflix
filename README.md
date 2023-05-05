@@ -5,7 +5,7 @@ The system will analyze user patterns, preferences, interests, and requirements 
  
 The AI recommendation system for course books will offer a more individualized approach to book selection, empowering students and boosting their involvement with the course materials. Students will be more likely to achieve academically and fully benefit from their course if they have the right books in their hands.
 
-###REFERENCES
+## REFERENCES
 “Book Recommendation System through content based and collaborative filtering method” https://ieeexplore.ieee.org/document/7684166
 “Build a Book Recommendation System” - https://www.analyticsvidhya.com/blog/2021/06/build-book-recommendation-system-unsupervised-learning-project/?
 Dataset from Kaggle - https://www.kaggle.com/datasets/rxsraghavagrawal/book-recommender-system
