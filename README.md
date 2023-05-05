@@ -5,6 +5,15 @@ The system will analyze user patterns, preferences, interests, and requirements 
  
 The AI recommendation system for course books will offer a more individualized approach to book selection, empowering students and boosting their involvement with the course materials. Students will be more likely to achieve academically and fully benefit from their course if they have the right books in their hands.
 
+## Methodology
+
+We have used two models one for the landing page and other for prediction.
+
+We have used LightFM methodolgy for Landing page.
+
+We have used KNN along with cosine similarity to recommend five similar books.
+
+
 ## REFERENCES
 “Book Recommendation System through content based and collaborative filtering method” https://ieeexplore.ieee.org/document/7684166
 “Build a Book Recommendation System” - https://www.analyticsvidhya.com/blog/2021/06/build-book-recommendation-system-unsupervised-learning-project/?
